@@ -1,0 +1,39 @@
+.app {
+}
+
+.logo {
+  width: 100%;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  color: red;
+  font-size: 14px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+table td {
+  text-align: center;
+  padding: 10px;
+  vertical-align: top;
+  border: 1px solid #444;
+  line-height: 15px;
+  position: relative;
+}
+
+.leaderboard-table {
+}
+
+.leaderboard-table .points {
+  color: red;
+}

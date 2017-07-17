@@ -1,0 +1,198 @@
+[
+  {
+    "name": "Jon Snow",
+    "img": "https://vignette3.wikia.nocookie.net/gameofthrones/images/0/05/GoT-Sn7_FirstLook_09.jpg/revision/latest?cb=20170612171243",
+    "player_id": 1
+  },
+  {
+    "name": "Daenerys Targaryen",
+    "img": "https://vignette3.wikia.nocookie.net/gameofthrones/images/8/88/Daenerys_Targaryen_S7_Promo_Image.PNG/revision/latest?cb=20170420191154"
+  },
+  {
+    "name": "Cersei Lannister",
+    "img": "https://vignette2.wikia.nocookie.net/gameofthrones/images/c/c7/Queen_Cersei_Main_The_winds_of_Winter.jpg/revision/latest?cb=20161215024728"
+  },
+  {
+    "name": "Tyrion Lannister",
+    "img": "https://vignette3.wikia.nocookie.net/gameofthrones/images/4/4f/GoT-Sn7_FirstLook_14.jpg/revision/latest?cb=20170612171541",
+    "player_id": 3
+  },
+  {
+    "name": "Jamie Lannister",
+    "img": "https://vignette4.wikia.nocookie.net/gameofthrones/images/c/c5/Jaime_s6_Ep08_.jpg/revision/latest?cb=20161215030911"
+  },
+  {
+    "name": "Arya Stark",
+    "img": "https://vignette4.wikia.nocookie.net/gameofthrones/images/9/93/AryaS7Crop.png/revision/latest?cb=20170705072701"
+  },
+  {
+    "name": "Samwell Tarly",
+    "img": "https://vignette2.wikia.nocookie.net/gameofthrones/images/1/16/Samwell_Tarly.PNG/revision/latest?cb=20170629150749"
+  },
+  {
+    "name": "Sandor Clegane",
+    "img": "https://vignette2.wikia.nocookie.net/gameofthrones/images/b/bc/Sandor_Clegane_Season_7_Promo_Image.PNG/revision/latest?cb=20170420201319"
+  },
+  {
+    "name": "Grey Worm",
+    "img": "https://vignette3.wikia.nocookie.net/gameofthrones/images/a/ac/Oathbreaker_Grey_Worm_Infobox_Size.jpg/revision/latest?cb=20160809054656",
+    "player_id": 3
+  },
+  {
+    "name": "Sansa Stark",
+    "img": "https://vignette3.wikia.nocookie.net/gameofthrones/images/9/90/Darksansastark.jpg/revision/latest?cb=20170603165208"
+  },
+  {
+    "name": "Yara Greyjoy",
+    "img": "https://vignette2.wikia.nocookie.net/gameofthrones/images/a/a8/Game_of_thrones_6x5_yara_promo.jpg/revision/latest?cb=20160808022737"
+  },
+  {
+    "name": "Lyanna Mormont",
+    "img": "https://vignette3.wikia.nocookie.net/gameofthrones/images/9/9e/Dragonstone_2-0.jpg/revision/latest?cb=20170712215831"
+  },
+  {
+    "name": "Brienne of Tarth",
+    "img": "https://vignette4.wikia.nocookie.net/gameofthrones/images/3/35/No_One_29.jpg/revision/latest?cb=20160614170946"
+  },
+  {
+    "name": "Missandei",
+    "img": "https://vignette3.wikia.nocookie.net/gameofthrones/images/d/d5/Missandei_Season_7_promo_image.PNG/revision/latest?cb=20170420202245"
+  },
+  {
+    "name": "Theon Greyjoy",
+    "img": "https://vignette2.wikia.nocookie.net/gameofthrones/images/6/65/605_Theon_Promo_new.jpg/revision/latest?cb=20160708203536"
+  },
+  {
+    "name": "Gregor Clegane",
+    "img": "https://vignette4.wikia.nocookie.net/gameofthrones/images/d/d2/Gregor_Clegane_Season_7.jpg/revision/latest?cb=20170525060517"
+  },
+  {
+    "name": "Jorah Mormont",
+    "img": "https://vignette1.wikia.nocookie.net/gameofthrones/images/c/c1/Ser_Jorah_s6_main_new.jpg/revision/latest?cb=20160702233345"
+  },
+  {
+    "name": "Petyr Baelish",
+    "img": "https://vignette1.wikia.nocookie.net/gameofthrones/images/9/94/Littlefinger_Infobox.PNG/revision/latest?cb=20170715132504"
+  },
+  {
+    "name": "Euron Greyjoy",
+    "img": "https://vignette3.wikia.nocookie.net/gameofthrones/images/4/4d/Game-of-thrones-6x5_euron_promo..jpg/revision/latest/scale-to-width-down/665?cb=20160523192637"
+  },
+  {
+    "name": "Varys",
+    "img": "https://vignette1.wikia.nocookie.net/gameofthrones/images/5/5f/Varys_Season_7_Promo_Image.PNG/revision/latest?cb=20170420202638",
+    "player_id": 3
+  },
+  {
+    "name": "Bronn",
+    "img": "https://vignette4.wikia.nocookie.net/gameofthrones/images/7/77/Ser_bronn_season_6_promotional.PNG/revision/latest?cb=20170503133221"
+  },
+  {
+    "name": "Drogon",
+    "img": "https://vignette4.wikia.nocookie.net/gameofthrones/images/3/3d/Drogon_Season_7_First_Look_Entertainment_Weekly.PNG/revision/latest?cb=20170522190937"
+  },
+  {
+    "name": "Benjen Stark",
+    "img": "https://vignette3.wikia.nocookie.net/gameofthrones/images/0/0f/610_Benjen_Promo_Crop.png/revision/latest/scale-to-width-down/700?cb=20160629183134"
+  },
+  {
+    "name": "Gendry",
+    "img": "https://vignette3.wikia.nocookie.net/gameofthrones/images/4/4f/Larges3-ep1-people-profilepic-gendry-800x800.jpg/revision/latest?cb=20160708043104",
+    "player_id": 3
+  },
+  {
+    "name": "Night King",
+    "img": "https://vignette1.wikia.nocookie.net/gameofthrones/images/2/2d/NightsKingCrop_%28Hardhome%29.PNG/revision/latest?cb=20150616005007"
+  },
+  {
+    "name": "Ellaria Sand",
+    "img": "https://vignette2.wikia.nocookie.net/gameofthrones/images/3/39/Ellaria_S6.png/revision/latest?cb=20170614212733"
+  },
+  {
+    "name": "Davos Seaworth",
+    "img": "https://vignette2.wikia.nocookie.net/gameofthrones/images/9/9b/Davos_Seaworth_Season_7_Promo_Image.PNG/revision/latest?cb=20170420194108"
+  },
+  {
+    "name": "Tormund",
+    "img": "https://vignette2.wikia.nocookie.net/gameofthrones/images/e/e9/GOT_Season_7_13.jpg/revision/latest?cb=20170612172752"
+  },
+  {
+    "name": "Melisandre",
+    "img": "https://vignette2.wikia.nocookie.net/gameofthrones/images/3/3f/S06E00_-_Melisandre_Cropped.jpg/revision/latest/scale-to-width-down/660?cb=20160708201948"
+  },
+  {
+    "name": "Jaqen H'ghar",
+    "img": "https://vignette3.wikia.nocookie.net/gameofthrones/images/d/da/The_Door_Jaqen_infobox.jpg/revision/latest?cb=20160808073200"
+  },
+  {
+    "name": "Qyburn",
+    "img": "https://vignette2.wikia.nocookie.net/gameofthrones/images/0/00/Qyburn-S5.png/revision/latest?cb=20150420170635"
+  },
+  {
+    "name": "Gilly",
+    "img": "https://vignette3.wikia.nocookie.net/gameofthrones/images/5/5d/Gilly.PNG/revision/latest?cb=20170612191446",
+    "player_id": 3
+  },
+  {
+    "name": "Beric Dondarrion",
+    "img": "https://vignette2.wikia.nocookie.net/gameofthrones/images/6/66/Beric_s6_infobox.jpg/revision/latest/scale-to-width-down/596?cb=20160808020126"
+  },
+  {
+    "name": "Ghost",
+    "img": "https://vignette4.wikia.nocookie.net/gameofthrones/images/9/99/Ghost_2.png/revision/latest?cb=20150404153709" 
+  },
+  {
+    "name": "Brynden Tully",
+    "img": "https://vignette2.wikia.nocookie.net/gameofthrones/images/6/61/6x07_Blackfish.png/revision/latest/scale-to-width-down/700?cb=20160601191023"
+  },
+  {
+    "name": "Rhaegal",
+    "img": "https://vignette2.wikia.nocookie.net/gameofthrones/images/2/20/Rhaegal_Season_4.jpg/revision/latest?cb=20160710215715"
+  },
+  {
+    "name": "Nymeria",
+    "img": "https://vignette4.wikia.nocookie.net/gameofthrones/images/a/ac/NymeriaTop.jpg/revision/latest?cb=20141115023958"
+  },
+  {
+    "name": "Viserion",
+    "img": "https://vignette2.wikia.nocookie.net/gameofthrones/images/d/d9/Viserion_Season_4.jpg/revision/latest?cb=20160710223640"
+  },
+  {
+    "name": "Thoros",
+    "img": "https://vignette2.wikia.nocookie.net/gameofthrones/images/6/68/Thoros_promotional_season_6.jpg/revision/latest?cb=20160613162637"
+  },
+  {
+    "name": "Meera Reed",
+    "img": "https://vignette2.wikia.nocookie.net/gameofthrones/images/f/f9/Meera_Season_7.png/revision/latest?cb=20170712192035",
+    "player_id": 3
+  },
+  {
+    "name": "Olenna Tyrell",
+    "img": "https://vignette1.wikia.nocookie.net/gameofthrones/images/b/bb/Olenna_season_6_a.jpg/revision/latest?cb=20160718204242"
+  },
+  {
+    "name": "Robin Arryn",
+    "img": "https://vignette4.wikia.nocookie.net/gameofthrones/images/7/74/Robin_Aaryn_Book_of_Stranger.jpg/revision/latest/scale-to-width-down/618?cb=20160714005525"
+  },
+  {
+    "name": "Nymeria Sand",
+    "img": "https://vignette2.wikia.nocookie.net/gameofthrones/images/1/12/Nymerias6.png/revision/latest/scale-to-width-down/683?cb=20160531044501"
+  },
+  {
+    "name": "Podrick Payne",
+    "img": "https://vignette3.wikia.nocookie.net/gameofthrones/images/4/48/GOT_Season_7_15.jpg/revision/latest/scale-to-width-down/665?cb=20170612172754"
+  },
+  {
+    "name": "Obara Sand",
+    "img": "https://vignette1.wikia.nocookie.net/gameofthrones/images/7/7b/Obaras6.png/revision/latest/scale-to-width-down/699?cb=20160531044948",
+    "player_id": 3
+  },
+  {
+    "name": "Eddison Tollett",
+    "img": "https://vignette1.wikia.nocookie.net/gameofthrones/images/2/25/Eddison_the_red_woman_s6.jpg/revision/latest?cb=20160813042644"
+  },
+  {
+    "name": "Robett Glover",
+    "img": "https://vignette4.wikia.nocookie.net/gameofthrones/images/d/db/RobettGlover-Profile_%28brightened%29.jpg/revision/latest?cb=20160710211504"
+  }
+]

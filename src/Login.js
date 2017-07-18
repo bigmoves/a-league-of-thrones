@@ -3,7 +3,6 @@ import { graphql, gql } from 'react-apollo';
 import { withRouter } from 'react-router-dom';
 import './Login.css';
 class Login extends Component {
-
   state = {
     email: '',
     password: ''
@@ -12,15 +11,20 @@ class Login extends Component {
   signinUser = () => {
     const { email, password } = this.state;
 
-    this.props.signinUser({ variables: { email, password } })
+    this.props
+      .signinUser({ variables: { email, password } })
       .then(response => {
-        window.localStorage.setItem('graphcoolToken', response.data.signinUser.token);
+        window.localStorage.setItem(
+          'graphcoolToken',
+          response.data.signinUser.token
+        );
         this.props.history.replace('/');
-      }).catch(e => {
+      })
+      .catch(e => {
         console.error(e);
         this.props.history.replace('/');
       });
-  }
+  };
   render() {
     if (this.props.data.loading) {
       return <div>Loading...</div>;
@@ -33,20 +37,31 @@ class Login extends Component {
     return (
       <div className="Login">
         <div className="input-container">
-          <input type="text" placeholder="Enter email" onChange={e => this.setState({ email: e.target.value })}/>
-          <br/>
-          <input type="password" placeholder="Enter password" onChange={e => this.setState({ password: e.target.value })}/>
-          <br/><br/>
-          <button className="btn-link" onClick={this.signinUser}>Sign in</button>
+          <input
+            type="text"
+            placeholder="Enter email"
+            onChange={e => this.setState({ email: e.target.value })}
+          />
+          <br />
+          <input
+            type="password"
+            placeholder="Enter password"
+            onChange={e => this.setState({ password: e.target.value })}
+          />
+          <br />
+          <br />
+          <button className="btn-link" onClick={this.signinUser}>
+            Sign in
+          </button>
         </div>
-       </div>
+      </div>
     );
   }
 }
 
 const signinUser = gql`
-  mutation ($email: String!, $password: String!) {
-    signinUser(email: {email: $email, password: $password}) {
+  mutation($email: String!, $password: String!) {
+    signinUser(email: { email: $email, password: $password }) {
       token
     }
   }
@@ -61,5 +76,7 @@ const userQuery = gql`
 `;
 
 export default graphql(signinUser, { name: 'signinUser' })(
-  graphql(userQuery, { options: { fetchPolicy: 'network-only' }})(withRouter(Login))
+  graphql(userQuery, { options: { fetchPolicy: 'network-only' } })(
+    withRouter(Login)
+  )
 );

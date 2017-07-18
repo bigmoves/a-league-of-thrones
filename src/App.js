@@ -5,7 +5,7 @@ import characters from './characters';
 import { gql, graphql } from 'react-apollo';
 import { withRouter } from 'react-router-dom';
 
-const getTeamForPlayer = (id) => {
+const getTeamForPlayer = id => {
   return characters.filter(char => char.player_id === id);
 };
 
@@ -23,12 +23,26 @@ class App extends Component {
               <td>Points</td>
             </tr>
             {players.map((player, i) => {
-              return <tr>
-                <td><b>{i}</b></td>
-                <td>{player.name}</td>
-                <td dangerouslySetInnerHTML={{ __html: getTeamForPlayer(player.id).map(char => char.name).join(',<br/>')}}></td>
-                <td className="points">0</td>
-              </tr>;
+              return (
+                <tr>
+                  <td>
+                    <b>
+                      {i}
+                    </b>
+                  </td>
+                  <td>
+                    {player.name}
+                  </td>
+                  <td
+                    dangerouslySetInnerHTML={{
+                      __html: getTeamForPlayer(player.id)
+                        .map(char => char.name)
+                        .join(',<br/>')
+                    }}
+                  />
+                  <td className="points">0</td>
+                </tr>
+              );
             })}
           </tbody>
         </table>
@@ -41,10 +55,16 @@ class App extends Component {
               <td>Image</td>
             </tr>
             {characters.map(char => {
-              return <tr>
-                <td>{char.name}</td>
-                <td><img src={char.img} width="50"/></td>
-              </tr>;
+              return (
+                <tr>
+                  <td>
+                    {char.name}
+                  </td>
+                  <td>
+                    <img src={char.img} width="50" />
+                  </td>
+                </tr>
+              );
             })}
           </tbody>
         </table>

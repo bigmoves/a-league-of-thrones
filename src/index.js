@@ -19,30 +19,34 @@ const networkInterface = createNetworkInterface({
   uri: 'https://api.graph.cool/simple/v1/cj55ue2dwq21a0148ytkgob1r'
 });
 
-const client = new ApolloClient({networkInterface});
+const client = new ApolloClient({ networkInterface });
 
-networkInterface.use([{
-  applyMiddleware(req, next) {
-    if (!req.options.headers) {
-      req.options.headers = {};
+networkInterface.use([
+  {
+    applyMiddleware(req, next) {
+      if (!req.options.headers) {
+        req.options.headers = {};
+      }
+
+      // get the authentication token from local storage if it exists
+      if (localStorage.getItem('graphcoolToken')) {
+        req.options.headers.authorization = `Bearer ${localStorage.getItem(
+          'graphcoolToken'
+        )}`;
+      }
+
+      next();
     }
-
-    // get the authentication token from local storage if it exists
-    if (localStorage.getItem('graphcoolToken')) {
-      req.options.headers.authorization = `Bearer ${localStorage.getItem('graphcoolToken')}`;
-    }
-
-    next();
   }
-}]);
+]);
 
 ReactDOM.render(
   <ApolloProvider client={client}>
     <Router>
       <div>
-        <Header/>
+        <Header />
         <div className="container">
-          <img className="logo" src={logo} width="500"/>
+          <img className="logo" src={logo} width="500" />
 
           <Route exact path="/" component={App} />
           <Route path="/login" component={Login} />

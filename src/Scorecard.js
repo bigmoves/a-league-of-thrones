@@ -4,7 +4,6 @@ import { withRouter } from 'react-router-dom';
 import './Scorecard.css';
 
 class Scorecard extends Component {
-
   state = {
     selectedEpisodeId: '',
     selectedCharacterId: ''
@@ -14,19 +13,22 @@ class Scorecard extends Component {
     const episodeId = this.state.selectedEpisodeId;
     const characterId = this.state.selectedCharacterId;
 
-    this.props.createScorecard({ variables: { episodeId, characterId } })
+    this.props
+      .createScorecard({ variables: { episodeId, characterId } })
       .then(response => console.log(response))
-      .catch(err => console.error(err))
-  }
+      .catch(err => console.error(err));
+  };
 
-  handleSelectEpisode = (e) => {
-    console.log(e.target.value)
+  handleSelectEpisode = e => {
+    console.log(e.target.value);
     this.setState({ selectedEpisodeId: e.target.value });
-  }
+  };
 
   render() {
-    const firstEpisodeId = this.props.data.allEpisodes && this.props.data.allEpisodes[0].id;
-    const firstCharacterId = this.props.data.allCharacters && this.props.data.allCharacters[0].id;
+    const firstEpisodeId =
+      this.props.data.allEpisodes && this.props.data.allEpisodes[0].id;
+    const firstCharacterId =
+      this.props.data.allCharacters && this.props.data.allCharacters[0].id;
 
     if (this.props.data.loading) {
       return <div>Loading...</div>;
@@ -35,49 +37,72 @@ class Scorecard extends Component {
     return (
       <div className="Scorecard">
         <h1>Select Episode:</h1>
-        <select value={this.state.selectedEpisodeId || firstEpisodeId} onChange={e => this.setState({ selectedEpisodeId: e.target.value })}>
+        <select
+          value={this.state.selectedEpisodeId || firstEpisodeId}
+          onChange={e => this.setState({ selectedEpisodeId: e.target.value })}
+        >
           {this.props.data.allEpisodes.map((episode, i) => {
-            return <option key={i} value={episode.id}>{episode.name}</option>;
+            return (
+              <option key={i} value={episode.id}>
+                {episode.name}
+              </option>
+            );
           })}
         </select>
-        <br/>
+        <br />
         <h1>Select Character:</h1>
-        <select value={this.state.selectedCharacterId || firstCharacterId} onChange={e => this.setState({ selectedCharacterId: e.target.value })}>
+        <select
+          value={this.state.selectedCharacterId || firstCharacterId}
+          onChange={e => this.setState({ selectedCharacterId: e.target.value })}
+        >
           {this.props.data.allCharacters.map((character, i) => {
-            return <option key={i}>{character.name}</option>;
+            return (
+              <option key={i}>
+                {character.name}
+              </option>
+            );
           })}
         </select>
-        <br/>
-        
+        <br />
+
         {this.props.data.allActionDescriptors.map((action, i) => {
-          return <p><input key={i} type="text" placeholder={action.name}/></p>;
+          return (
+            <p>
+              <input key={i} type="text" placeholder={action.name} />
+            </p>
+          );
         })}
-        <br/>
-        <button className="btn-link" onClick={this.submit}>Submit</button>
+        <br />
+        <button className="btn-link" onClick={this.submit}>
+          Submit
+        </button>
       </div>
     );
   }
 }
 
 const createAction = gql`
-  mutation ($scorecardId: Int!, $name: String!, $points: Int!) {
-    createAction (scorecardId: $scorecardId, name: $name, points: $points) {
+  mutation($scorecardId: Int!, $name: String!, $points: Int!) {
+    createAction(scorecardId: $scorecardId, name: $name, points: $points) {
       id
     }
   }
 `;
 
 const createScorecard = gql`
-  mutation ($episodeId: Int!) {
-    createScorecard (episodeId: $episodeId) {
+  mutation($episodeId: Int!) {
+    createScorecard(episodeId: $episodeId) {
       id
     }
   }
 `;
 
 const createUser = gql`
-  mutation ($email: String!, $password: String!, $name: String!) {
-    createUser(authProvider: {email: {email: $email, password: $password}}, name: $name) {
+  mutation($email: String!, $password: String!, $name: String!) {
+    createUser(
+      authProvider: { email: { email: $email, password: $password } }
+      name: $name
+    ) {
       id
     }
   }
@@ -99,4 +124,6 @@ const query = gql`
   }
 `;
 
-export default graphql(query)(graphql(createScorecard, { name: 'createScorecard' })(withRouter(Scorecard)));
+export default graphql(query)(
+  graphql(createScorecard, { name: 'createScorecard' })(withRouter(Scorecard))
+);

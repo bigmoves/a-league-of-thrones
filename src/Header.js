@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { graphql, gql } from 'react-apollo';
 import { withRouter } from 'react-router-dom';
+
 class Header extends Component {
   signin = () => {
     this.props.history.push('/login');

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { graphql, gql } from 'react-apollo';
 import { withRouter } from 'react-router-dom';
 import './Login.css';
+
 class Signup extends Component {
   state = {
     name: '',

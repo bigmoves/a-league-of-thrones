@@ -16,7 +16,7 @@ import {
 } from 'react-apollo';
 
 const networkInterface = createNetworkInterface({
-  uri: 'https://api.graph.cool/simple/v1/cj55ue2dwq21a0148ytkgob1r'
+  uri: process.env.REACT_APP_API_URI
 });
 
 const client = new ApolloClient({ networkInterface });

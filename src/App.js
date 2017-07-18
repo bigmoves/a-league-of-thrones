@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import players from './players';
 import characters from './characters';
-import { gql, graphql } from 'react-apollo';
 import { withRouter } from 'react-router-dom';
 
 const getTeamForPlayer = id => {
@@ -24,7 +23,7 @@ class App extends Component {
             </tr>
             {players.map((player, i) => {
               return (
-                <tr>
+                <tr key={i}>
                   <td>
                     <b>
                       {i}
@@ -54,9 +53,9 @@ class App extends Component {
               <td>Name</td>
               <td>Image</td>
             </tr>
-            {characters.map(char => {
+            {characters.map((char, i) => {
               return (
-                <tr>
+                <tr key={i}>
                   <td>
                     {char.name}
                   </td>
@@ -72,14 +71,5 @@ class App extends Component {
     );
   }
 }
-
-const userQuery = gql`
-  query {
-    user {
-      id
-      name
-    }
-  }
-`;
 
 export default withRouter(App);

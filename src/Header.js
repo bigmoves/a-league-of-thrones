@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import { graphql, gql } from 'react-apollo';
 import { withRouter } from 'react-router-dom';
+import { object } from 'prop-types';
 
 class Header extends Component {
+  static propTypes = {
+    data: object.isRequired,
+    history: object.isRequired
+  };
+
   signin = () => {
     this.props.history.push('/login');
   };
@@ -11,8 +17,8 @@ class Header extends Component {
     window.localStorage.removeItem('graphcoolToken');
     window.location.reload();
   };
+
   render() {
-    console.log(this.props.data);
     return (
       <div className="Header">
         {this.props.data.user && this.props.data.user.email}

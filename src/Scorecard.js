@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import { graphql, gql } from 'react-apollo';
 import { withRouter } from 'react-router-dom';
+import { func, object } from 'prop-types';
 import './Scorecard.css';
 
 class Scorecard extends Component {
+  static propTypes = {
+    data: object.isRequired,
+    createScorecard: func.isRequired
+  };
+
   state = {
     selectedEpisodeId: '',
     selectedCharacterId: ''
@@ -20,7 +26,6 @@ class Scorecard extends Component {
   };
 
   handleSelectEpisode = e => {
-    console.log(e.target.value);
     this.setState({ selectedEpisodeId: e.target.value });
   };
 
@@ -67,8 +72,8 @@ class Scorecard extends Component {
 
         {this.props.data.allActionDescriptors.map((action, i) => {
           return (
-            <p>
-              <input key={i} type="text" placeholder={action.name} />
+            <p key={i}>
+              <input type="text" placeholder={action.name} />
             </p>
           );
         })}
@@ -81,6 +86,7 @@ class Scorecard extends Component {
   }
 }
 
+// @TODO
 const createAction = gql`
   mutation($scorecardId: Int!, $name: String!, $points: Int!) {
     createAction(scorecardId: $scorecardId, name: $name, points: $points) {

@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import { graphql, gql } from 'react-apollo';
 import { withRouter } from 'react-router-dom';
+import { func, object } from 'prop-types';
 import './Login.css';
 
 class Login extends Component {
+  static propTypes = {
+    data: object.isRequired,
+    history: object.isRequired,
+    signinUser: func.isRequired
+  };
+
   state = {
     email: '',
     password: ''
@@ -26,6 +33,7 @@ class Login extends Component {
         this.props.history.replace('/');
       });
   };
+
   render() {
     if (this.props.data.loading) {
       return <div>Loading...</div>;
